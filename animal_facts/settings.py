@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'animal_facts.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'animal_facts_db',
-        'USER': 'postgres',
-        'PASSWORD': '#Kitloisa15',
-        'HOST': 'localhost',
+        'NAME': 'da2brm17fpos81',
+        'USER': 'dsybpfqahexlbf',
+        'PASSWORD': '7fa8a0e4d6aad1c7eea01385bd9475deb6c1117c3a6bbe3b7e510e2546d33dfd',
+        'HOST': 'ec2-54-156-110-139.compute-1.amazonaws.com',
         'PORT': '5432'
     }
 }
