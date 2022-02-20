@@ -2,12 +2,156 @@
 {% extends 'base.html' %}
 <!-- inherit base template -->
 
+<!-- load static -->
+{% load static %}
+<!-- load static -->
+
 <!-- page body begin -->
 {% block content %}
 <!-- page body begin -->
 
-<div class="app-body">
-  <h1>Working!</h1>
+<div class="app-body container">
+  <!--  -->
+  <div class="intro">
+    <div class="intro-text">
+      <h3><strong>Animal Facts</strong></h3>
+      <p>
+        use these interesting animal facts in your next project. <br />
+        Find out interesting facts about animals.
+      </p>
+      <br />
+      <a
+        class="btn btn-dark"
+        href="https://github.com/LoisaKitakaya/Animal-Facts-API.git"
+      >
+        View on GitHub <i class="bi bi-github"></i>
+      </a>
+      <a class="btn btn-secondary" href="{% url 'docs' %}">
+        Read the Docs <i class="bi bi-file-earmark-text"></i>
+      </a>
+    </div>
+    <div class="intro-image">
+      <img src="{% static 'img/animals.jpg' %}" alt="" />
+    </div>
+  </div>
+  <!--  -->
+  <div class="setup text-center">
+    <h3><strong>Do you love animals?</strong></h3>
+    <h3>
+      <strong>Want a new API to play around with for your next project?</strong>
+    </h3>
+    <br />
+    <p class="setup-text">
+      <strong>Animal Facts</strong> is a REST API that returns accurate
+      researched facts about animals in json format. If you love animals, this
+      is the API for you. It's awesome for learning/teaching purposes too. Try
+      it out!
+    </p>
+  </div>
+  <!--  -->
+  <div class="resources">
+    <h4><strong>Endpoints</strong></h4>
+    <hr />
+    <p>
+      These are the 4 main endpoints available in
+      <strong>Animal facts</strong> api:
+    </p>
+    <code>GET: http://127.0.0.1:8000/api-v1/all-facts.json</code>
+    <br />
+    <code>GET: http://127.0.0.1:8000/api-v1/animal-fact/4.json</code>
+    <br />
+    <code>GET: http://127.0.0.1:8000/api-v1/random-fact.json</code>
+    <br />
+    <code>GET: http://127.0.0.1:8000/api-v1/search-animal.json</code>
+    <br />
+    <br />
+    <p class="text-muted">
+      Note: Use the <strong>GET</strong> HTTP methods to get a response.
+    </p>
+    <hr />
+    <a class="btn btn-secondary" href="{% url 'docs' %}">
+      View details on Docs <i class="bi bi-file-earmark-text"></i>
+    </a>
+  </div>
+  <br />
+  <br />
+  <!--  -->
+  <div class="docs-snippet">
+    <!--  -->
+    <h4>Example code:</h4>
+    <hr />
+    <pre class="code-snippet bg-secondary">
+      <code>
+        const url = 'http://127.0.0.1:8000/api-v1/all-facts.json';
+
+        fetch(url).then((response)=>{
+          return response.json();
+        }).then(data=>{
+          console.log(data);
+        }).catch(function(error) {
+          console.log(error);
+        });
+    </code>
+    </pre>
+    <hr />
+    <!--  -->
+    <h4>Example response:</h4>
+    <hr />
+    <pre class="code-snippet bg-secondary">
+      <code>
+        {
+          "id": 1,
+          "animal": "Pistol Shrimp",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Alpheus_distinguendus.jpg",
+          "setup": "The loudest animal in the world is a mere 2cm long, prawn.",
+          "delivery": "The Pistol Shrimp is capable of snapping it’s claw shut so rapidly, that it creates a bubble which collapses to produce a sonic blast, louder than a Corncode’s sonic boom. The shock wave can reach 230 decibels, louder than the sound of a gunshot. The imploding bubble for split seconds also generates temperates of 4,400C, nearly as hot as the sun, killing it’s prey."
+        },
+
+        {
+          "id": 2,
+          "animal": "Flamingo",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Flamingos_Laguna_Colorada.jpg",
+          "setup": "Flamingos are not pink.",
+          "delivery": "They are born grey, their diet of brine shrimp and blue green algae contains a natural pink dye called canthaxanthin that makes their feathers pink. Flamingos in zoos often lost their coloring, until zoo keepers supplemented their diets."
+        },
+
+        {
+          "id": 3,
+          "animal": "Otter",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Fischotter,_Lutra_Lutra.JPG",
+          "setup": "Otters “hold hands” while sleeping.",
+          "delivery": "Otters hold hands while sleeping, so they don’t float away from each other. And it looks super-cute."
+        },
+
+        {
+          "id": 4,
+          "animal": "Hummingbird",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Trinidad_and_Tobago_hummingbirds_composite.jpg",
+          "setup": "Hummingbirds are the only known birds that can also fly backwards.",
+          "delivery": "They often do this when retreating away from flowers."
+        },
+
+        {
+          "id": 5,
+          "animal": "Dolphin",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Tursiops_truncatus_01.jpg",
+          "setup": "Dolphins use toxic pufferfish to ‘get high’.",
+          "delivery": "Dolphins deliberately handle pufferfish causing them to release toxins as a defense mechanism. These toxins can be deadly in high doses, but also have a narcotic effect – and are a powerful hallucinogenic, which dolphins appear to enjoy. A documentary witnessed them passing around pufferfish in a pod, before floating just underneath the water’s surface, apparently ‘mesmerized by their own reflections’ afterwards."
+        },
+
+        {
+          ...more data here..
+        }
+    </code>
+    </pre>
+    <hr />
+    <a class="btn btn-secondary" href="{% url 'docs' %}">
+      View details on Docs <i class="bi bi-file-earmark-text"></i>
+    </a>
+  </div>
+  <!--  -->
+  <br />
+  <br />
 </div>
 
 <!-- page body end -->

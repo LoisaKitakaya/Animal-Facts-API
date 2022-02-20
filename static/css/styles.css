@@ -1,0 +1,97 @@
+html,
+body {
+  height: 100vh !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  width: 100%;
+}
+
+.navigation-links a {
+  margin: 0 1rem !important;
+}
+
+.logo img {
+  padding: 0.5rem 1rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8rem 0;
+}
+
+.intro-text {
+  padding: 1rem;
+}
+
+.intro-text a {
+  margin-right: 0.5rem !important;
+}
+
+.intro-image img {
+  height: 350px;
+  width: 450px;
+  padding: 1rem;
+  border-radius: 1.5rem !important;
+}
+
+.setup {
+  padding: 4rem 0;
+  margin-bottom: 8rem;
+}
+
+.setup-text,
+.docs-snippet,
+.resources,
+.docs-container {
+  width: 80% !important;
+}
+
+.setup-text,
+.resources,
+.docs-snippet {
+  margin: auto;
+}
+
+.code-snippet {
+  color: white;
+  max-height: 300px !important;
+  overflow-y: auto !important;
+}
+
+.footer {
+  width: 100% !important;
+  background-color: whitesmoke !important;
+  padding: 1rem !important;
+}
+
+.docs-details {
+  padding: 0.5rem !important;
+}
+
+.docs-container {
+  margin: auto;
+}
+
+.part-1 {
+  padding: 1rem 0;
+}
+
+.part-2 h3 {
+  text-decoration: underline !important;
+}
+
+.code-btn {
+  margin-right: 0.5rem !important;
+}

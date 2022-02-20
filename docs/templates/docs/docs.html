@@ -1,0 +1,380 @@
+<!-- inherit base template -->
+{% extends 'base.html' %}
+<!-- inherit base template -->
+
+<!-- load static -->
+{% load static %}
+<!-- load static -->
+
+<!-- page body begin -->
+{% block content %}
+<!-- page body begin -->
+
+<div class="app-body container">
+  <!--  -->
+  <div class="docs-container">
+    <!--  -->
+    <div class="part-1">
+      <h2>How to use</h2>
+      <p>
+        Animal Facts API can be used with any kind of project (school, personal,
+        etc). You can use examples below to check how Animal Facts API works and
+        feel free to enjoy it in your awesome projects!
+      </p>
+      <p>
+        These are the 4 main endpoints available in
+        <strong>Animal facts</strong> api:
+      </p>
+      <code>GET: http://127.0.0.1:8000/api-v1/all-facts.json</code>
+      <br />
+      <code>GET: http://127.0.0.1:8000/api-v1/animal-fact/4.json</code>
+      <br />
+      <code>GET: http://127.0.0.1:8000/api-v1/random-fact.json</code>
+      <br />
+      <code>GET: http://127.0.0.1:8000/api-v1/search-animal.json</code>
+      <br />
+      <br />
+      <p class="text-muted">
+        Note: Use the <strong>GET</strong> HTTP methods to get a response.
+      </p>
+    </div>
+    <!--  -->
+    <div class="part-2">
+      <!-- docs 1 -->
+      <h3>Fetching 'all' facts</h3>
+      <br />
+      <p>
+        Endpoint: <br />
+        <code>http://127.0.0.1:8000/api-v1/all-facts.json</code>
+      </p>
+      <br />
+      <h4>Example code:</h4>
+      <button class="btn btn-outline-secondary code-btn js">JavaScript</button>
+      <button class="btn btn-outline-secondary code-btn jq">JQuery AJAX</button>
+      <button class="btn btn-outline-secondary code-btn py">Python</button>
+      <hr />
+      <!--  -->
+      <pre class="code-snippet bg-secondary js-snippet">
+      <code>
+        const url = 'http://127.0.0.1:8000/api-v1/all-facts.json';
+
+        fetch(url).then((response)=>{
+          return response.json();
+        }).then(data=>{
+          console.log(data);
+        }).catch(function(error) {
+          console.log(error);
+        });
+      </code>
+      </pre>
+      <!--  -->
+      <pre class="code-snippet bg-secondary jq-snippet">
+      <code>
+        $.ajax({
+          url:'http://127.0.0.1:8000/api-v1/all-facts.json',
+          type:'GET',
+          dataType:'json',
+          success: function(response) {
+            console.log(response);
+          },
+          error: function(error) {
+            console.log(error);
+          },
+        });
+      </code>
+      </pre>
+      <!--  -->
+      <pre class="code-snippet bg-secondary py-snippet">
+      <code>
+        $ pip install requests # if you don't have requests installed already
+
+        import requests
+
+        res = requests.get('http://127.0.0.1:8000/api-v1/all-facts.json')
+
+        response = res.json()
+
+        print(response)
+      </code>
+      </pre>
+      <!--  -->
+      <h4>Example response:</h4>
+      <hr />
+      <pre class="code-snippet bg-secondary">
+      <code>
+        {
+          "id": 1,
+          "animal": "Pistol Shrimp",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Alpheus_distinguendus.jpg",
+          "setup": "The loudest animal in the world is a mere 2cm long, prawn.",
+          "delivery": "The Pistol Shrimp is capable of snapping it’s claw shut so rapidly, that it creates a bubble which collapses to produce a sonic blast, louder than a Corncode’s sonic boom. The shock wave can reach 230 decibels, louder than the sound of a gunshot. The imploding bubble for split seconds also generates temperates of 4,400C, nearly as hot as the sun, killing it’s prey."
+        },
+
+        {
+          "id": 2,
+          "animal": "Flamingo",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Flamingos_Laguna_Colorada.jpg",
+          "setup": "Flamingos are not pink.",
+          "delivery": "They are born grey, their diet of brine shrimp and blue green algae contains a natural pink dye called canthaxanthin that makes their feathers pink. Flamingos in zoos often lost their coloring, until zoo keepers supplemented their diets."
+        },
+
+        {
+          "id": 3,
+          "animal": "Otter",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Fischotter,_Lutra_Lutra.JPG",
+          "setup": "Otters “hold hands” while sleeping.",
+          "delivery": "Otters hold hands while sleeping, so they don’t float away from each other. And it looks super-cute."
+        },
+
+        {
+          "id": 4,
+          "animal": "Hummingbird",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Trinidad_and_Tobago_hummingbirds_composite.jpg",
+          "setup": "Hummingbirds are the only known birds that can also fly backwards.",
+          "delivery": "They often do this when retreating away from flowers."
+        },
+
+        {
+          "id": 5,
+          "animal": "Dolphin",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Tursiops_truncatus_01.jpg",
+          "setup": "Dolphins use toxic pufferfish to ‘get high’.",
+          "delivery": "Dolphins deliberately handle pufferfish causing them to release toxins as a defense mechanism. These toxins can be deadly in high doses, but also have a narcotic effect – and are a powerful hallucinogenic, which dolphins appear to enjoy. A documentary witnessed them passing around pufferfish in a pod, before floating just underneath the water’s surface, apparently ‘mesmerized by their own reflections’ afterwards."
+        },
+
+        {
+          ...more data here..
+        }
+      </code>
+      </pre>
+      <hr />
+      <!-- docs 1 -->
+      <!-- docs 2 -->
+      <h3>Fetching an animals fact based on its 'id' in the database facts</h3>
+      <br />
+      <p>
+        Endpoint: <br />
+        <code>http://127.0.0.1:8000/api-v1/animal-fact/4.json</code>
+      </p>
+      <br />
+      <h4>Example code:</h4>
+      <button class="btn btn-outline-secondary code-btn js">JavaScript</button>
+      <button class="btn btn-outline-secondary code-btn jq">JQuery AJAX</button>
+      <button class="btn btn-outline-secondary code-btn py">Python</button>
+      <hr />
+      <!--  -->
+      <pre class="code-snippet bg-secondary js-snippet">
+      <code>
+        const url = 'http://127.0.0.1:8000/api-v1/animal-fact/4.json';
+
+        fetch(url).then((response)=>{
+          return response.json();
+        }).then(data=>{
+          console.log(data);
+        }).catch(function(error) {
+          console.log(error);
+        });
+      </code>
+      </pre>
+      <!--  -->
+      <pre class="code-snippet bg-secondary jq-snippet">
+      <code>
+        $.ajax({
+          url:'http://127.0.0.1:8000/api-v1/animal-fact/4.json',
+          type:'GET',
+          dataType:'json',
+          success: function(response) {
+            console.log(response);
+          },
+          error: function(error) {
+            console.log(error);
+          },
+        });
+      </code>
+      </pre>
+      <!--  -->
+      <pre class="code-snippet bg-secondary py-snippet">
+      <code>
+        $ pip install requests # if you don't have requests installed already
+
+        import requests
+
+        res = requests.get('http://127.0.0.1:8000/api-v1/animal-fact/4.json')
+
+        response = res.json()
+
+        print(response)
+      </code>
+      </pre>
+      <!--  -->
+      <h4>Example response:</h4>
+      <hr />
+      <pre class="code-snippet bg-secondary">
+      <code>
+        {
+          "id": 4,
+          "animal": "Hummingbird",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Trinidad_and_Tobago_hummingbirds_composite.jpg",
+          "setup": "Hummingbirds are the only known birds that can also fly backwards.",
+          "delivery": "They often do this when retreating away from flowers."
+        }
+      </code>
+      </pre>
+      <hr />
+      <!-- docs 2 -->
+      <!-- docs 3 -->
+      <h3>Fetching a random fact</h3>
+      <br />
+      <p>
+        Endpoint: <br />
+        <code>http://127.0.0.1:8000/api-v1/random-fact.json</code>
+      </p>
+      <br />
+      <h4>Example code:</h4>
+      <button class="btn btn-outline-secondary code-btn js">JavaScript</button>
+      <button class="btn btn-outline-secondary code-btn jq">JQuery AJAX</button>
+      <button class="btn btn-outline-secondary code-btn py">Python</button>
+      <hr />
+      <!--  -->
+      <pre class="code-snippet bg-secondary js-snippet">
+      <code>
+        const url = 'http://127.0.0.1:8000/api-v1/random-fact.json';
+
+        fetch(url).then((response)=>{
+          return response.json();
+        }).then(data=>{
+          console.log(data);
+        }).catch(function(error) {
+          console.log(error);
+        });
+      </code>
+      </pre>
+      <!--  -->
+      <pre class="code-snippet bg-secondary jq-snippet">
+      <code>
+        $.ajax({
+          url:'http://127.0.0.1:8000/api-v1/random-fact.json',
+          type:'GET',
+          dataType:'json',
+          success: function(response) {
+            console.log(response);
+          },
+          error: function(error) {
+            console.log(error);
+          },
+        });
+      </code>
+      </pre>
+      <!--  -->
+      <pre class="code-snippet bg-secondary py-snippet">
+      <code>
+        $ pip install requests # if you don't have requests installed already
+
+        import requests
+
+        res = requests.get('http://127.0.0.1:8000/api-v1/random-fact.json')
+
+        response = res.json()
+
+        print(response)
+      </code>
+      </pre>
+      <!--  -->
+      <h4>Example response:</h4>
+      <hr />
+      <pre class="code-snippet bg-secondary">
+      <code>
+        {
+          "id": 2,
+          "animal": "Flamingo",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Flamingos_Laguna_Colorada.jpg",
+          "setup": "Flamingos are not pink.",
+          "delivery": "They are born grey, their diet of brine shrimp and blue green algae contains a natural pink dye called canthaxanthin that makes their feathers pink. Flamingos in zoos often lost their coloring, until zoo keepers supplemented their diets."
+        }
+      </code>
+      </pre>
+      <hr />
+      <!-- docs 3 -->
+      <!-- docs 4 -->
+      <h3>Fetching a fact based on a 'search' query</h3>
+      <br />
+      <p>
+        Endpoint: <br />
+        <code>
+          http://127.0.0.1:8000/api-v1/search-animal.json?q=your_query
+        </code>
+      </p>
+      <br />
+      <h4>Example code:</h4>
+      <button class="btn btn-outline-secondary code-btn js">JavaScript</button>
+      <button class="btn btn-outline-secondary code-btn jq">JQuery AJAX</button>
+      <button class="btn btn-outline-secondary code-btn py">Python</button>
+      <hr />
+      <!--  -->
+      <pre class="code-snippet bg-secondary js-snippet">
+      <code>
+        const url = 'http://127.0.0.1:8000/api-v1/search-animal.json?q=otter';
+
+        fetch(url).then((response)=>{
+          return response.json();
+        }).then(data=>{
+          console.log(data);
+        }).catch(function(error) {
+          console.log(error);
+        });
+      </code>
+      </pre>
+      <!--  -->
+      <pre class="code-snippet bg-secondary jq-snippet">
+      <code>
+        $.ajax({
+          url:'http://127.0.0.1:8000/api-v1/search-animal.json?q=otter',
+          type:'GET',
+          dataType:'json',
+          success: function(response) {
+            console.log(response);
+          },
+          error: function(error) {
+            console.log(error);
+          },
+        });
+      </code>
+      </pre>
+      <!--  -->
+      <pre class="code-snippet bg-secondary py-snippet">
+      <code>
+        $ pip install requests # if you don't have requests installed already
+
+        import requests
+
+        res = requests.get('http://127.0.0.1:8000/api-v1/search-animal.json?q=otter')
+
+        response = res.json()
+
+        print(response)
+      </code>
+      </pre>
+      <!--  -->
+      <h4>Example response:</h4>
+      <hr />
+      <pre class="code-snippet bg-secondary">
+      <code>
+        {
+          "id": 3,
+          "animal": "Otter",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Fischotter,_Lutra_Lutra.JPG",
+          "setup": "Otters “hold hands” while sleeping.",
+          "delivery": "Otters hold hands while sleeping, so they don’t float away from each other. And it looks super-cute."
+        }
+      </code>
+      </pre>
+      <hr />
+      <!-- docs 4 -->
+    </div>
+  </div>
+  <!--  -->
+</div>
+
+<!-- page body end -->
+{% endblock %}
+<!-- page body end -->
