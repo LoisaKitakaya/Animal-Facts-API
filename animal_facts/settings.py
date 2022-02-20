@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-w=-2w5rc2pv!c13c$r^4j_sou=b$c*uz*tg9_m%h66e=1w(d+q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'animalfactsapi.herokuapp.com']
 
 
 # Application definition
