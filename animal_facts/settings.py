@@ -21,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-w=-2w5rc2pv!c13c$r^4j_sou=b$c*uz*tg9_m%h66e=1w(d+q'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'animalfactsapi.herokuapp.com']
 
@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'animal_facts.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'da2brm17fpos81',
-        'USER': 'dsybpfqahexlbf',
-        'PASSWORD': '7fa8a0e4d6aad1c7eea01385bd9475deb6c1117c3a6bbe3b7e510e2546d33dfd',
-        'HOST': 'ec2-54-156-110-139.compute-1.amazonaws.com',
+        'NAME': os.environ.get('NAME'),
+        'USER': os.environ.get('USER'),
+        'PASSWORD': os.environ.get('PASSWORD'),
+        'HOST': os.environ.get('HOST'),
         'PORT': '5432'
     }
 }

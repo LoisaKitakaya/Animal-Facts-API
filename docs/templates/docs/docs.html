@@ -25,13 +25,13 @@
         These are the 4 main endpoints available in
         <strong>Animal facts</strong> api:
       </p>
-      <code>GET: http://127.0.0.1:8000/api-v1/all-facts.json</code>
+      <code>GET: https://animalfactsapi.herokuapp.com/api-v1/all-facts.json</code>
       <br />
-      <code>GET: http://127.0.0.1:8000/api-v1/animal-fact/4.json</code>
+      <code>GET: https://animalfactsapi.herokuapp.com/api-v1/animal-fact/4.json</code>
       <br />
-      <code>GET: http://127.0.0.1:8000/api-v1/random-fact.json</code>
+      <code>GET: https://animalfactsapi.herokuapp.com/api-v1/random-fact.json</code>
       <br />
-      <code>GET: http://127.0.0.1:8000/api-v1/search-animal.json</code>
+      <code>GET: https://animalfactsapi.herokuapp.com/api-v1/search-animal.json</code>
       <br />
       <br />
       <p class="text-muted">
@@ -45,7 +45,7 @@
       <br />
       <p>
         Endpoint: <br />
-        <code>http://127.0.0.1:8000/api-v1/all-facts.json</code>
+        <code>https://animalfactsapi.herokuapp.com/api-v1/all-facts.json</code>
       </p>
       <br />
       <h4>Example code:</h4>
@@ -56,7 +56,7 @@
       <!--  -->
       <pre class="code-snippet bg-secondary js-snippet">
       <code>
-        const url = 'http://127.0.0.1:8000/api-v1/all-facts.json';
+        const url = 'https://animalfactsapi.herokuapp.com/api-v1/all-facts.json';
 
         fetch(url).then((response)=>{
           return response.json();
@@ -71,7 +71,7 @@
       <pre class="code-snippet bg-secondary jq-snippet">
       <code>
         $.ajax({
-          url:'http://127.0.0.1:8000/api-v1/all-facts.json',
+          url:'https://animalfactsapi.herokuapp.com/api-v1/all-facts.json',
           type:'GET',
           dataType:'json',
           success: function(response) {
@@ -90,7 +90,7 @@
 
         import requests
 
-        res = requests.get('http://127.0.0.1:8000/api-v1/all-facts.json')
+        res = requests.get('https://animalfactsapi.herokuapp.com/api-v1/all-facts.json')
 
         response = res.json()
 
@@ -154,7 +154,7 @@
       <br />
       <p>
         Endpoint: <br />
-        <code>http://127.0.0.1:8000/api-v1/animal-fact/4.json</code>
+        <code>https://animalfactsapi.herokuapp.com/api-v1/animal-fact/4.json</code>
       </p>
       <br />
       <h4>Example code:</h4>
@@ -165,7 +165,7 @@
       <!--  -->
       <pre class="code-snippet bg-secondary js-snippet">
       <code>
-        const url = 'http://127.0.0.1:8000/api-v1/animal-fact/4.json';
+        const url = 'https://animalfactsapi.herokuapp.com/api-v1/animal-fact/4.json';
 
         fetch(url).then((response)=>{
           return response.json();
@@ -180,7 +180,7 @@
       <pre class="code-snippet bg-secondary jq-snippet">
       <code>
         $.ajax({
-          url:'http://127.0.0.1:8000/api-v1/animal-fact/4.json',
+          url:'https://animalfactsapi.herokuapp.com/api-v1/animal-fact/4.json',
           type:'GET',
           dataType:'json',
           success: function(response) {
@@ -199,7 +199,7 @@
 
         import requests
 
-        res = requests.get('http://127.0.0.1:8000/api-v1/animal-fact/4.json')
+        res = requests.get('https://animalfactsapi.herokuapp.com/api-v1/animal-fact/4.json')
 
         response = res.json()
 
@@ -227,7 +227,7 @@
       <br />
       <p>
         Endpoint: <br />
-        <code>http://127.0.0.1:8000/api-v1/random-fact.json</code>
+        <code>https://animalfactsapi.herokuapp.com/api-v1/random-fact.json</code>
       </p>
       <br />
       <h4>Example code:</h4>
@@ -238,7 +238,7 @@
       <!--  -->
       <pre class="code-snippet bg-secondary js-snippet">
       <code>
-        const url = 'http://127.0.0.1:8000/api-v1/random-fact.json';
+        const url = 'https://animalfactsapi.herokuapp.com/api-v1/random-fact.json';
 
         fetch(url).then((response)=>{
           return response.json();
@@ -253,7 +253,7 @@
       <pre class="code-snippet bg-secondary jq-snippet">
       <code>
         $.ajax({
-          url:'http://127.0.0.1:8000/api-v1/random-fact.json',
+          url:'https://animalfactsapi.herokuapp.com/api-v1/random-fact.json',
           type:'GET',
           dataType:'json',
           success: function(response) {
@@ -272,7 +272,7 @@
 
         import requests
 
-        res = requests.get('http://127.0.0.1:8000/api-v1/random-fact.json')
+        res = requests.get('https://animalfactsapi.herokuapp.com/api-v1/random-fact.json')
 
         response = res.json()
 
@@ -301,7 +301,7 @@
       <p>
         Endpoint: <br />
         <code>
-          http://127.0.0.1:8000/api-v1/search-animal.json?q=your_query
+          https://animalfactsapi.herokuapp.com/api-v1/search-animal.json?q=your_query
         </code>
       </p>
       <br />
@@ -313,7 +313,7 @@
       <!--  -->
       <pre class="code-snippet bg-secondary js-snippet">
       <code>
-        const url = 'http://127.0.0.1:8000/api-v1/search-animal.json?q=otter';
+        const url = 'https://animalfactsapi.herokuapp.com/api-v1/search-animal.json?q=otter';
 
         fetch(url).then((response)=>{
           return response.json();
@@ -328,7 +328,7 @@
       <pre class="code-snippet bg-secondary jq-snippet">
       <code>
         $.ajax({
-          url:'http://127.0.0.1:8000/api-v1/search-animal.json?q=otter',
+          url:'https://animalfactsapi.herokuapp.com/api-v1/search-animal.json?q=otter',
           type:'GET',
           dataType:'json',
           success: function(response) {
@@ -347,7 +347,7 @@
 
         import requests
 
-        res = requests.get('http://127.0.0.1:8000/api-v1/search-animal.json?q=otter')
+        res = requests.get('https://animalfactsapi.herokuapp.com/api-v1/search-animal.json?q=otter')
 
         response = res.json()
 
